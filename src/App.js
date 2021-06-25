@@ -1,5 +1,5 @@
 import './App.css';
-import APIToken from './artifacts/contracts/APIToken.sol/APIToken.json'
+import APIToken from './artifacts/contracts/APIToken.sol/ALIAPIToken.json'
 import DAI from './artifacts/contracts/DAI.sol/Dai.json'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Container, Row, Col } from 'react-bootstrap'

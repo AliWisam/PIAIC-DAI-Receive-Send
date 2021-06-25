@@ -4,7 +4,7 @@ import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 import Message from './Message'
 
-const APITokenAddress = "0x4EC53c535eb8443B15A174b13D4647497CE380a8"
+const APITokenAddress = "0x4c09552Bace79F75aF950FF841ceFC005E1a2BE7"
 // const DAIAddress = "0xc7AD46e0b8a400Bb3C915120d284AafbA8fc4735";
 
 
@@ -26,7 +26,7 @@ const TokenSend = (props) => {
 
   useEffect(() => {  
     requestAccount();
-     daiAllowance();
+    daiAllowance();
     getBalance();
         
   });

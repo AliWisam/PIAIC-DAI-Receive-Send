@@ -9,7 +9,7 @@ async function main() {
   );
 
 
-  const APIToken = await hre.ethers.getContractFactory("APIToken");
+  const APIToken = await hre.ethers.getContractFactory("ALIAPIToken");
   const apiToken = await APIToken.deploy("0xc7AD46e0b8a400Bb3C915120d284AafbA8fc4735");
 
 

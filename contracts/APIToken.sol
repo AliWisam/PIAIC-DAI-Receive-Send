@@ -5,7 +5,7 @@ pragma solidity ^0.8.0;
 import "@openzeppelin/contracts/token/ERC1155/ERC1155.sol";
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 
-contract APIToken is ERC1155 {
+contract ALIAPIToken is ERC1155 {
     
     
 
@@ -33,14 +33,12 @@ contract APIToken is ERC1155 {
     }
     
     function getAPIToken(uint _amount) external{
- 
-     require(_amount <=1,"token amount shoudn't be greater than 1");
     
      require(_token.allowance(msg.sender,address(this)) != 0,"zero allowance, pleae approve DAI first to be used by this contract");
    
      address from = msg.sender;
      require(_token.transferFrom(from, address(this), _amount)== true,"error");
-  _mint(msg.sender, AliAPIToken, _amount * 100, "");
+     _mint(msg.sender, AliAPIToken, _amount * 100, "");
     
 }
 

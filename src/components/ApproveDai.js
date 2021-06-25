@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/Button'
 
 
 const DAIAddress = "0xc7AD46e0b8a400Bb3C915120d284AafbA8fc4735";
-const APITokenAddress = "0x4EC53c535eb8443B15A174b13D4647497CE380a8"
+const APITokenAddress = "0x4c09552Bace79F75aF950FF841ceFC005E1a2BE7"
 
 const TokenSend = (props) => {
 
@@ -38,6 +38,8 @@ async function daiAllowance() {
     const signer = provider.getSigner();
     const contract = new ethers.Contract(APITokenAddress, props.tokenContract.abi, signer)
     let daiAllowed = await contract.checkDaiAllowance();
+    console.log(daiAllowed);
+    console.log("daiAllowed--->>",parseInt(daiAllowed[0]._hex))
     
     setDAiAllow(parseInt(daiAllowed[0]._hex));
     

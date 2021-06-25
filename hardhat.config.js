@@ -1,5 +1,8 @@
 require("@nomiclabs/hardhat-waffle");
 require('dotenv').config()
+require('@nomiclabs/hardhat-ethers');
+require("@nomiclabs/hardhat-etherscan");
+// const { mnemonic } = require('./secrets.json');
 
 // This is a sample Hardhat task. To learn how to create your own go to
 // https://hardhat.org/guides/create-task.html
@@ -40,5 +43,10 @@ task("accounts", "Prints the list of accounts", async () => {
         settings: { } 
       }
     ]
-  }
+  },
+  //ehtereum API key
+  etherscan: {
+    apiKey: "ZT7NMAJNR62F53F28IYHFABAFV1WST8U77",
+  },
 };
+//0x386522c0B5D2A9738925997497A23b783519A600
